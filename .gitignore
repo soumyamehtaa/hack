@@ -1,0 +1,46 @@
+# Python environment and bytecode
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Secrets and credentials
+.streamlit/secrets.toml
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secret*.json
+.netrc
+
+# Large downloaded datasets, caches and model checkpoints
+data/cache/
+data/experiment/csqa_embeddings.npz
+*.npz
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.parquet
+.cache/
+
+# Generated experiment runs (regenerable via python -m climate_intelligence.demo)
+data/climate_intelligence/
+
+# Temporary and OS / editor files
+.DS_Store
+*.tmp
+*.swp
+*~
+*.log
+*.code-workspace

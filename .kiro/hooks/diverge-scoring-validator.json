@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "DIVERGE Scoring Validator",
+      "trigger": "PostFileSave",
+      "action": {
+        "type": "command",
+        "command": "python -m pytest -q tests/test_scoring.py"
+      },
+      "description": "Automatically runs regression tests when DIVERGE's scoring or evaluation code changes.",
+      "matcher": ".*(scor|evaluat|divergen).*\\.py$",
+      "enabled": true
+    }
+  ]
+}
